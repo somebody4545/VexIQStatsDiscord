@@ -1,0 +1,9 @@
+*.env
+*.crt
+*.key
+venv/
+__pycache__/
+*.replit
+*.lock
+*.toml
+*.nix
