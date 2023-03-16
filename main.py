@@ -135,7 +135,7 @@ async def skills(ctx, team):
 	except:
 		driver = 0 
 
-	embed=discord.Embed(title="Current VIQC Event", url=f"https://www.vexrobotics.com/iq/competition/viqc-current-game", color=0x24c9ff)
+	embed=discord.Embed(title="Current VIQC Event", url="https://www.vexrobotics.com/iq/competition/viqc-current-game", color=0x24c9ff)
 	embed.set_author(name=f"VIQC {team} ({teamname})", url=f"https://www.robotevents.com/teams/VIQC/{team}")
 	embed.add_field(name="Rank", value=rank, inline=True)
 	embed.add_field(name="Score", value=score, inline=True)
@@ -246,7 +246,7 @@ async def compare(ctx, team1, team2):
 				id2 = allteam2['id']
 				team2name = allteam2['team_name']
 	except:
-		await ctx.send(f"Sorry, we couldn't find a team specified.")
+		await ctx.send("Sorry, we couldn't find a team specified.")
 		return
 		
 	team1info = f'https://www.robotevents.com/api/v2/teams/{id1}/skills'
@@ -398,7 +398,7 @@ async def compare(ctx, team1, team2):
 		ad1 = "↔️⏺️"
 		ad2 = "↔️⏺️"
 	
-	embed=discord.Embed(title="Current VIQC Event", url=f"https://www.vexrobotics.com/iq/competition/viqc-current-game", color=0x24c9ff)
+	embed=discord.Embed(title="Current VIQC Event", url="https://www.vexrobotics.com/iq/competition/viqc-current-game", color=0x24c9ff)
 	embed.set_author(name=f"Comparing VIQC {team1} vs. {team2}")
 	embed.add_field(name=f"{team1} ({team1name}):", value=f"Rank: {rank1} ({r1})\nScore: {score1} ({s1})\nProgramming: {autonomous1} ({a1})\nDriver: {driver1} ({d1})\nHighest Programming: {autonomousHigh1} ({ah1})\nHighest Driver: {driverHigh1} ({ad1})")
 	embed.add_field(name=f"{team2} ({team2name}):", value=f"Rank: {rank2} ({r2})\nScore: {score2} ({s2})\nProgramming: {autonomous2} ({a2})\nDriver: {driver2} ({d2})\nHighest Programming: {autonomousHigh2} ({ah2})\nHighest Driver: {driverHigh2} ({ad2})")
