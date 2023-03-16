@@ -112,11 +112,11 @@ async def skills(ctx, team):
 	eventdata(teaminfo, driverlist, autonlist, events)
 
 
-	if len(driverlist):
+	if driverlist:
 		driverHigh = max(driverlist)
 	else:
 		driverHigh=0
-	if len(autonlist):
+	if autonlist:
 		autonomousHigh = max(autonlist)
 	else:
 		autonomousHigh=0
@@ -217,7 +217,7 @@ async def awards(ctx, team):
 		for award in awardsDict[event]:
 			orderedAwards+=f"{award}\n"
 
-	if not len(orderedAwards):
+	if not orderedAwards:
 		orderedAwards = "\n\nCouldn't find any awards this season!"
 
 	await ctx.send(f"**{team.upper()} ({teamname})'s Awards**{orderedAwards}")
@@ -285,11 +285,11 @@ async def compare(ctx, team1, team2):
 	eventdata(team2info, driverlist2, autonlist2, events2)
 
 
-	if len(driverlist1):
+	if driverlist1:
 		driverHigh1 = max(driverlist1)
 	else:
 		driverHigh1=0
-	if len(autonlist1):
+	if autonlist1:
 		autonomousHigh1 = max(autonlist1)
 	else:
 		autonomousHigh1=0
@@ -308,11 +308,11 @@ async def compare(ctx, team1, team2):
 	except:
 		driver1 = 0 
 		
-	if len(driverlist2):
+	if driverlist2:
 		driverHigh2 = max(driverlist2)
 	else:
 		driverHigh2=0
-	if len(autonlist2):
+	if autonlist2:
 		autonomousHigh2 = max(autonlist2)
 	else:
 		autonomousHigh2=0
