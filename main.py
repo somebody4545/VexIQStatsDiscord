@@ -1,14 +1,9 @@
 import discord
 from discord_slash import SlashCommand
-import discord_slash # Importing the newly installed library.
 import os
 from discord.ext import commands
-#import keep_alive
-import random
 import requests
 from bs4 import BeautifulSoup
-import json
-import asyncio
 
 
 client = commands.Bot(command_prefix=[' '])
