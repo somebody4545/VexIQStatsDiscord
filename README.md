@@ -1,4 +1,4 @@
-# VexIQDiscordStats2
+# VexIQStatsDiscord
 
 copied from bot description:
 
